@@ -1,27 +1,30 @@
-# Week4tut
+# Project Title
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Commands Used
 
-## Development server
+### Angular (in Node)
+- `ng new <project-name>` - Create a new Angular project.
+- `ng serve` - Run the Angular application.
+- `ng generate component <component-name>` - Generate a new component.
+- `ng generate service <service-name>` - Generate a new service.
+- `ng generate module <module-name>` - Generate a new module.
+- `ng build` - Build the Angular application for production.
+- `ng update` - Update Angular CLI to the latest version.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### npm (Installing Modules)
+- `npm install` - Install all dependencies listed in package.json.
+- `npm install <package-name>` - Install a specific package.
+- `npm install -g <package-name>` - Install a specific package globally.
+- `npm update` - Update all outdated packages in the project.
+- `npm run <script>` - Run a specific script defined in the package.json file.
+- `npm init` - Create a new package.json file.
 
-## Code scaffolding
+### Git
+- `git init` - Initialize a new Git repository.
+- `git clone <repo-url>` - Clone an existing repository from a URL.
+- `git add .` - Add all files to staging.
+- `git add <file>` - Add a specific file to staging.
+- `git commit -m "Commit message"` - Commit changes with a message.
+- `git push -u origin main` - Push changes to the remote repository and set upstream.
+- `git branch` - List all local branches.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
