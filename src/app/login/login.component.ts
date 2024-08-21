@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';  // Adjust path if necessary
 
 @Component({
   selector: 'app-login',
@@ -15,21 +16,25 @@ export class LoginComponent {
   password: string = '';
   errorMessage: string = '';
 
-  users = [
-    { email: 'user1@example.com', password: 'password1' },
-    { email: 'user2@example.com', password: 'password2' },
-    { email: 'user3@example.com', password: 'password3' }
-  ];
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   onSubmit() {
-    const user = this.users.find(u => u.email === this.email && u.password === this.password);
-    if (user) {
-      this.errorMessage = '';
-      this.router.navigate(['/account']);
-    } else {
-      this.errorMessage = 'Invalid email or password';
-    }
+    // Use AuthService to attempt login
+    this.authService.login(this.email, this.password).subscribe(
+      user => {
+        if (user && user.valid) {
+          this.authService.storeUserDetails(user);
+          this.errorMessage = ''; // Clear any previous error messages
+          this.router.navigate(['/account']); // Redirect to the account page
+        } else {
+          this.errorMessage = 'Invalid email or password';
+        }
+      },
+      error => {
+        console.error('Login error', error);
+        this.errorMessage = 'An error occurred. Please try again later.';
+      }
+    );
   }
 }
+

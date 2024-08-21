@@ -1,29 +1,8 @@
-<!-- account.component.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accounts Page</title>
-  <style>
-    .container {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .img-fluid {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>Accounts Page</h2>
-    <img src="assets/spiderman.jpg" alt="Account Image" class="img-fluid">
-  </div>
-</body>
-</html>
+<div class="container">
+  <h2>Account</h2>
+  <img src="assets/spiderman.jpg" alt="Account Image" class="img-fluid">
+  
+  <p>Email: {{ email }}</p>
+  <p>Birthdate: {{ birthdate }}</p>
+  <p>Age: {{ age }}</p>
+</div>

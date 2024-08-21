@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet],  // Import RouterOutlet for routing
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'week4tut';
+  title = 'my-angular-app';  // Adjust title or other properties as needed
+
+  constructor(private router: Router) {}
+
+  logout() {
+    // Clear session storage
+    sessionStorage.clear();
+
+    // Redirect to login page
+    this.router.navigate(['/login']);
+  }
 }

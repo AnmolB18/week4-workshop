@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Profile</h2>
+  <form (ngSubmit)="saveDetails()">
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="email" name="email" required>
+
+    <label for="birthdate">Birthdate:</label>
+    <input id="birthdate" type="date" [(ngModel)]="birthdate" name="birthdate" required>
+
+    <label for="age">Age:</label>
+    <input id="age" type="number" [(ngModel)]="age" name="age" required>
+
+    <button type="submit">Save</button>
+  </form>
+</div>
