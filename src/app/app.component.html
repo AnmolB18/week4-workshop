@@ -196,10 +196,14 @@
 </nav>
 <header>
   <nav>
-    <a routerLink="/profile">Profile</a>
-    <a routerLink="/account">Account</a>
+      <a routerLink="/login">Login</a>
     <button (click)="logout()">Log Out</button>
   </nav>
+  <nav>
+    <a routerLink="/profile">Profile</a>
+  <button (click)="goToProfile()">Go to Profile</button>
+</nav>
+
 </header>
 <router-outlet></router-outlet>
 

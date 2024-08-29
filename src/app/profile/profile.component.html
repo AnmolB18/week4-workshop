@@ -1,15 +1,17 @@
-<div class="container">
-  <h2>Profile</h2>
-  <form (ngSubmit)="saveDetails()">
-    <label for="email">Email:</label>
-    <input id="email" [(ngModel)]="email" name="email" required>
+<h2>Edit Profile</h2>
 
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" name="username" [value]="username" (input)="username" type="text">
+  </div>
+  <div>
     <label for="birthdate">Birthdate:</label>
-    <input id="birthdate" type="date" [(ngModel)]="birthdate" name="birthdate" required>
-
+    <input id="birthdate" name="birthdate" [value]="birthdate" (input)="birthdate" type="date">
+  </div>
+  <div>
     <label for="age">Age:</label>
-    <input id="age" type="number" [(ngModel)]="age" name="age" required>
-
-    <button type="submit">Save</button>
-  </form>
-</div>
+    <input id="age" name="age" [value]="age" (input)="age" type="number">
+  </div>
+  <button type="submit" onsubmit="saveProfile()">Save</button>
+</form>

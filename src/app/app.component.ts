@@ -9,9 +9,14 @@ import { Router, RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  profile: string = 'User Profile';  
   title = 'my-angular-app';  // Adjust title or other properties as needed
 
   constructor(private router: Router) {}
+
+  goToProfile(): void {
+    this.router.navigate(['/profile']);
+  }
 
   logout() {
     // Clear session storage

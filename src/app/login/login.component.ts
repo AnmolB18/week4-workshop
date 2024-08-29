@@ -19,7 +19,6 @@ export class LoginComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
   onSubmit() {
-    // Use AuthService to attempt login
     this.authService.login(this.email, this.password).subscribe(
       user => {
         if (user && user.valid) {
@@ -37,4 +36,3 @@ export class LoginComponent {
     );
   }
 }
-
