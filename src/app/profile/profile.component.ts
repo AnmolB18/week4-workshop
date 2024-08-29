@@ -37,8 +37,14 @@ export class ProfileComponent implements OnInit {
     sessionStorage.setItem('currentUser', JSON.stringify(user));
     alert('Profile updated successfully!');
 
-    // Redirect to the account page after saving the profile
-    this.router.navigate(['/account']); 
+    console.log('Navigating to account page');
+    this.router.navigate(['/account']).then(success => {
+      if (success) {
+        console.log('Navigation successful');
+      } else {
+        console.log('Navigation failed');
+      }
+    });
   }
 
   onSubmit(): void {
